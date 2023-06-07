@@ -13,5 +13,20 @@ do
     else Console.WriteLine("try again");
     guess = int.Parse(Console.ReadLine());
     guesscount++;
-} while (random != guess);
-Console.WriteLine("Congratulations you guessed correctly in " + guesscount + " tries");
+    if (guess == random)
+    {
+        Console.WriteLine("Congratulations you guessed correctly in " + guesscount + " tries");
+        Console.WriteLine("Do you want to play again y/n?");
+        if (Console.ReadLine() == "y")
+        {
+            Console.WriteLine("Input min range");
+            min = int.Parse(Console.ReadLine());
+            Console.WriteLine("Input max range");
+            max = int.Parse(Console.ReadLine());
+            random = rnd.Next(min, max);
+            guesscount = 0;
+
+        }
+        else Environment.Exit(0);
+    }
+} while (true);
