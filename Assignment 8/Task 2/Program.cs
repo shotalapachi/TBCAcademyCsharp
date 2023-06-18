@@ -21,3 +21,4 @@ account1.TransferFunds(account2, new Currency { amount = 300 });
 Console.WriteLine("Updated Balances:");
 Console.WriteLine("Account 1: {0} {1}", account1.AccountNumber, account1.BalanceCheck());
 Console.WriteLine("Account 2: {0} {1}", account2.AccountNumber, account2.BalanceCheck());
+
