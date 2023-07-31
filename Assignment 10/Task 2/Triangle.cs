@@ -88,5 +88,13 @@ namespace Task_2
             Triangle result = new Triangle(leg, leg, hypotenuse);
             return result;
         }
+
+        public static explicit operator Triangle(double d)
+        {
+            Triangle result = new Triangle(d, d, d);
+            return result;
+        }
+
+
     }
 }
