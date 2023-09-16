@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+
 namespace Task_1
 {
     public class Quiz
@@ -20,6 +23,23 @@ namespace Task_1
         {
             _name = name;
             _path = path;
+        }
+        
+        public void CreateQuiz(string path)
+        {
+            try
+            {
+                using (var writer = new StreamWriter(path))
+                {
+                    writer.WriteLine("Test");
+                    writer.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Task_1
 {
@@ -13,6 +14,10 @@ namespace Task_1
             {
                 case 1:
                     Console.WriteLine("input quiz name");
+                    var name = Console.ReadLine();
+                    var path = @"../../QuizFiles/" + name + ".txt";
+                    var quiz = new Quiz(name, path);
+                    quiz.CreateQuiz(path);
                     break;
                 case 2:
                     Console.WriteLine("choose quiz");
